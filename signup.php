@@ -74,8 +74,8 @@ if(isset($_POST['create'])){
           <div class="box">  
               <span><i class="fa fa-phone"></i></span>  
               <input type="number" name="contact" placeholder="Contact Number" class="input-data" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-    type = "number"
-    maxlength = "10"  required>  
+              type = "number"
+              maxlength = "10"  required>  
           </div>
           <div class="box">  
                <span><i class="fas fa-car"></i></span>  

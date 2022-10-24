@@ -27,35 +27,53 @@
      
       <h3 class="title">License Disc Holders</h3>
 
-      <div class="product" data-name="p-1">
+      <div class="product1" data-name="p-1">
+      <div align="center" class="category">
         <img src="files/volvo.jpg" width="200" height="200">
         <h3>Volvo</h3>
         <div class="price">R34.00</div>
+        <p><button>Add to cart</button></p>
       </div>
 
-      <div class="product" data-name="p-2">
+      <div align="center" class="category">
          <img src="files/audi.jpg" width="200" height="200">
          <h3>Audi</h3>
          <div class="price">R34.00</div>
-       </div>
+         <p><button>Add to cart</button></p>
+      </div>
 
-       <div class="product" data-name="p-3">
+      <div align="center" class="category"> 
          <img src="files/nissan.jpg" width="200" height="200">
          <h3>Nissan</h3>
          <div class="price">R34.00</div>
+         <p><button>Add to cart</button></p>
        </div>
+      </div>
 
-       <div class="product" data-name="p-4">
+
+       <div class="product2" data-name="p-4">
+       <div align="center" class="category">
          <img src="files/toyota.jpg" width="200" height="200">
          <h3>Toyota</h3>
          <div class="price">R34.00</div>
+         <p><button>Add to cart</button></p>
+       
        </div>
-
-       <div class="product" data-name="p-5">
+       <div align="center" class="category">
          <img src="files/ford.jpg" width="200" height="200">
          <h3>Ford</h3>
          <div class="price">R34.00</div>
+         <p><button>Add to cart</button></p>
        </div>
+
+       <div align="center" class="category">
+         <img src="files/merc.jpg" width="250" height="200">
+         <h3>Mercedes Benz</h3>
+         <div class="price">R34.00</div>
+         <p><button>Add to cart</button></p>
+       </div>
+       </div>
+       
 
    </div>   
 </body>
