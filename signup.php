@@ -1,15 +1,29 @@
 <?php
-if(isset($_POST['create'])){
+session_start();
+$con = mysqli_connect("localhost:3306", "root", "Resegofetse.24", "mydb");
+
+if(isset($_POST['submit'])){
     $fname - $_POST['fname'];
     $lname - $_POST['lname'];
+    $idnum - $_POST['lname']; 
     $email - $_POST['email'];
     $password - $_POST['password'];
     $address - $_POST['address'];
     $contact - $_POST['contact'];
     $regnum - $_POST['regnum'];
     $vinnum - $_POST['vinnum'];
-    $firstname - $_POST['firstname'];
-     $firstname - $_POST['firstname'];
+
+    $query = "INSERT INTO client (client_fname, client_lname,client_address, client_contact, client_idnum) VALUES ('$fname', '$lname', '$address', '$contact', '$idnum'); INSERT INTO client_login (client_login_email, client_login_password) VALUES ('$email', '$password')";
+    mysqli_multi_query($link, $query);
+    $query_run = mysqli_query($con, $link);
+
+    if($query_run){
+        $_SESSION['status'] = "Success";
+        header("Location: selectedbox.php");
+    } else {
+        $_SESSION['status'] = "Not success";
+        header("Location: selectedbox.php");
+    }
 }
 ?>
 
@@ -44,7 +58,7 @@ if(isset($_POST['create'])){
           </div>  
 <div class="container">  
      <h2>Sign Up</h2>  
-     <form>  
+     <form action="signup.php" method="POST">  
           <span class="required">*</span> Required field
           <div class="box">  
                <span><i class="fa fa-user"></i></span>  
@@ -55,6 +69,12 @@ if(isset($_POST['create'])){
                <span><i class="fa fa-user"></i></span>  
                <input type="text" name="lname" placeholder="Last Name" class="input-data">  
           </div>  
+          <div class="box">  
+              <span><i class="fa fa-user"></i></span>  
+              <input type="number" name="idnum" placeholder="Identity Number" class="input-data" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "13"  required>  
+          </div>
           <div class="box">  
                <span><i class="fa fa-envelope"></i></span>  
                <input type="text" name="email" placeholder="Email" class="input-data" required>  
@@ -74,8 +94,8 @@ if(isset($_POST['create'])){
           <div class="box">  
               <span><i class="fa fa-phone"></i></span>  
               <input type="number" name="contact" placeholder="Contact Number" class="input-data" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-              type = "number"
-              maxlength = "10"  required>  
+    type = "number"
+    maxlength = "10"  required>  
           </div>
           <div class="box">  
                <span><i class="fas fa-car"></i></span>  
@@ -84,32 +104,21 @@ if(isset($_POST['create'])){
            <div class="box">  
                <span><i class="fas fa-car"></i></span>  
                <input type="text" name="vinnum" placeholder="Vehicle identification Number" class="input-data" maxlength="17" required>  
-           </div> 
-           <div>  
-                <?php
-
-                $con = mysqli_connect('localhost:3306', 'root', 'Resegofetse.24', 'mydb');
-
-                if($con === false){
-                    die("error" .mysqli_connect_error());
-
-                }
-
-                $sql = 'SELECT * FROM vehicle_make';
-                if($result = mysqli_query($con, $sql)){
-                    if(mysqli_num_rows($result) > 0){
-                        while($row = mysqli_fetch_array($result)){
-                            echo $row ['vehicle_make'];
-                        }
-                    }
-
-                }
-
-                ?>
-
-           </div>
-              <label for="cars">Choose a car type:</label>
+           </div>   
+          <label for="cars">Choose a car Make:</label>
               <select name="cars" id="cars">
+              <option value="" selected hidden>Select car make</option>
+              <option value="Volvo">Volvo</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ford">Ford</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Volkswagen">Volkswagen</option>
+              </select>
+
+              <label for="cartype">Choose a car type:</label>
+              <select name="cartype" id="cartype">
               <option value="" selected hidden>Select car type</option>
               <option value="Heavy Vehicle">Heavy Vehicle</option>
               <option value="Light Vehicle">Light Vehicle</option>
