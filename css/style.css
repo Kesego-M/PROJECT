@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 *{
 	margin: 0;
 	padding: 0;
@@ -278,3 +280,36 @@ ul li a:hover{
 
 
   
+
+/*dashboard code*/ 
+.sidebar{
+  width: 15%;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+.sidebar h4{
+  margin-bottom: 1.5rem;
+}
+.sidebar .balance{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.balance .icon{
+  color: #fff;
+  font-size: 20px;
+  border-radius: 6px;
+  margin-right: 1rem;
+  padding: 1rem;
+  background: rgb(37, 37, 37);
+}
+.balance .info h5{
+  font-size: 16px;
+}
+.balance .info span{
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+.balance .info i{
+  margin-right: 2px;
+}
