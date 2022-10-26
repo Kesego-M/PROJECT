@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
-$conn = mysqli_connect('localhost:3308', 'root', 'MoreLife1.', 'loginsite') or die ('Unable to connect');
+$conn = mysqli_connect("localhost:3306", "root", "Resegofetse.24", "site");
 
 ?>

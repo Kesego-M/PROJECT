@@ -1,25 +1,22 @@
 <?php
-
 @include 'config.php';
 
 if(isset($_POST['submit'])){
      $email = mysqli_real_escape_string($conn, $_POST['email']);
-     $password = md5($_POST['password']);
+     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-     $select = "SELECT * FROM login WHERE email = '$email' && password = '$password' ";
+     $select = "SELECT * FROM client WHERE email = '$email' && password = '$password' ";
 
      $result = mysqli_query($conn, $select);
 
-     if(mysqli_num_rows($result)> 0){
+     if(mysqli_num_rows($result) > 0){
+        
           $row = mysqli_fetch_array($result);
-
-          header('location:dashboard.php');
-          
+          header('Location:dashboard.php');
+     } else{
+          $error[] = 'Error email or pass';
      }
-}else {
-     $error[] = 'Incorrect email or password';
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -49,10 +46,11 @@ if(isset($_POST['submit'])){
                   </ul>
               </div>
           </div>
-          <div class="container">  
- 
-     <form action="" method="post">  
-     <h2>Sign In</h2> 
+
+<div class="container">  
+
+<form action="signin.php" method="POST">  
+     <h2>Sign in</h2>
      <?php
      if(isset($error)){
           foreach($error as $error){
@@ -68,14 +66,16 @@ if(isset($_POST['submit'])){
           <div class="box">  
                <span><i class="fa fa-lock"></i></span>  
                <input type="password" name="password" placeholder="Password" class="input-data" required>  
-          </div>
-          <div class="space">  
-               <input type="submit" name="submit" class="btn" value="Sign in">  
-          </div>  
-          <br><p>New member?
-            <a href="#">Sign up</a>
+          </div> 
+          <br></be><p>New member?
+            <a href="signup.php">Sign up</a> <!--and <a href="#">Policy privacy</a>-->
           </p>
+          <div class="space">  
+               <input type="submit" name="submit" class="btn" value="Submit">  
+          </div>  
      </form>  
+
+
 </div>  
                                                           
 </body>

@@ -1,28 +1,27 @@
 <?php
-session_start();
-$con = mysqli_connect("localhost:3306", "root", "Resegofetse.24", "mydb");
+
+@include 'config.php';
 
 if(isset($_POST['submit'])){
-    $fname - $_POST['fname'];
-    $lname - $_POST['lname'];
-    $idnum - $_POST['lname']; 
-    $email - $_POST['email'];
-    $password - $_POST['password'];
-    $address - $_POST['address'];
-    $contact - $_POST['contact'];
-    $regnum - $_POST['regnum'];
-    $vinnum - $_POST['vinnum'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $idnum = $_POST['idnum']; 
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $address = $_POST['address'];
+    $contact = $_POST['contact'];
+    
 
-    $query = "INSERT INTO client (client_fname, client_lname,client_address, client_contact, client_idnum) VALUES ('$fname', '$lname', '$address', '$contact', '$idnum'); INSERT INTO client_login (client_login_email, client_login_password) VALUES ('$email', '$password')";
-    mysqli_multi_query($link, $query);
-    $query_run = mysqli_query($con, $link);
+
+    $query = "INSERT INTO client (fname, lname, address, contact, idnum, email, password) VALUES ('$fname', '$lname', '$address', '$contact', '$idnum', '$email', '$password')";
+    $query_run = mysqli_query($conn, $query);
 
     if($query_run){
         $_SESSION['status'] = "Success";
-        header("Location: selectedbox.php");
+        header("Location: signin.php");
     } else {
         $_SESSION['status'] = "Not success";
-        header("Location: selectedbox.php");
+        header("Location: signup.php");
     }
 }
 ?>

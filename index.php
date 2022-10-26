@@ -14,7 +14,7 @@
             <div class="menu"> 
                 <ul>
                     <li><a href="#">HOME</a></li>
-                    <li><a href="signup.php">SIGN UP</a></li>
+                    <li><a href="signin.php">SIGN IN</a></li>
                     <li><a href="product.php">PRODUCTS</a></li>
                     <li><a href="#">CONTACT US</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -26,7 +26,7 @@
             <h1>What we do<br><span>to make your life a little easier:<br><span></h1>
             <p class="par"><li>With Licence_ease, you'll save time and money</li><br><li>Our service is accessible anytime and anywhere</li><br><li>We are customer focused</li></p>
             <br>
-            <button class="join"><a href="#">Get started</Join></a> </button>            
+            <button class="join"><a href="signup.php">Get started</Join></a> </button>            
 
         </div>
         
