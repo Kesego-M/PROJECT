@@ -1,6 +1,6 @@
 <?php
 
 session_start();
-$conn = mysqli_connect("localhost:3306", "root", "Resegofetse.24", "site");
+$conn = mysqli_connect("localhost:3308", "root", "MoreLife1.", "licence");
 
 ?>

@@ -31,11 +31,10 @@
               </div>
           </div>
 <div class="main-body">
-      <h2>Dashboard</h2>
       <div class="promo_card">
-        <h1>Welcome username </h1>
-        <span>Lorem ipsum dolor sit amet.</span>
-        <button>Learn More</button>
+        <h1>Welcome to Licence_ease </h1>
+        <span>Easily view your renewal details below & make payment</span>
+        <button>Update information?</button>
 </div>
 <div class="history_lists">
         <div class="list1">
@@ -43,17 +42,42 @@
             <h4>Vehicles</h4>
             <a href="#">See all</a>
           </div>
-          <table>
+          <table class="vtable">
             <thead>
               <tr>
                 <th>#</th>
-                <th>Make</th>
-                <th>Type</th>
-                <th>VIN</th>
-                <th>Renewal</th>
+                <th>REG#</th>
+                <th>VIN#</th>
+                <th>MAKE</th>
+                <th>MODEL</th>
               </tr>
             </thead>
             <tbody>
+              <?php
+              if($conn->connect_error){
+                die("Connection failed: " . $conn->connect_error);
+              }
+
+              $sql = "SELECT * from vehicle";
+              $result = $conn->query($sql);
+
+              if(!$result){
+                die("Invalid query: " . $conn->connect_error);
+              }
+
+              while($row = $result->fetch_assoc()){
+                echo "<tr>
+                <td>" .$row['idvehicle'] . "</td>
+                <td>" .$row['regnum'] . "</td>
+                <td>" .$row['vinnum'] . "</td>
+                <td>" .$row['make'] . "</td>
+                <td>" .$row['model'] . "</td>
+                </tr>                
+                
+                ";
+              }
+
+              ?>
             </tbody>
           </table>
         </div>
@@ -81,7 +105,6 @@
       <h4>Account Balance</h4>
       
       <div class="balance">
-        <i class="fas fa-money icon"></i>
         <div class="info">
           <h5>Rands</h5>
           <span><i class="fas fa-dollar"></i>25,000.00</span>
