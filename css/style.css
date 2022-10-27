@@ -350,3 +350,15 @@ p{
     max-width: 1rem 0 3rem 0;
     color: #5119f9;
 }
+.socials li{
+    margin: 0 10px;
+}
+li a{
+   text-decoration: none;
+   color: purple;
+   border: 1.1px solid blue;
+   padding: 8px;
+   border-radius: 50%;
+   width: 35px;
+
+}
