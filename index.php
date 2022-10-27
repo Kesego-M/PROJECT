@@ -3,6 +3,7 @@
 <head>
     <title>Licence_ease</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
     <div class="main">
@@ -29,7 +30,20 @@
             <button class="join"><a href="signup.php">Get started</Join></a> </button>            
 
         </div>
-        
+        <br></br>
+        <footer>
+          <div class="footer-content">
+            <h3>Licence_ease</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, molestias asperiores architecto quisquam magni voluptatem excepturi veritatis inventore corrupti, incidunt rerum adipisci numquam accusantium recusandae deserunt reprehenderit, ut nemo quam?</p>
+            <ul class="socials">
+              <li><a href="" class="fa fa-facebook"></a></li>
+              <li><a href="" class="fa fa-instagram"></a></li>
+              <li><a href="" class="fa fa-twitter"></a></li>
+              <li><a href="" class="fa fa-youtube"></a></li>  
+            </ul>
+          </div>
+        </footer>
     </div>
+    
 </body>
 </html>

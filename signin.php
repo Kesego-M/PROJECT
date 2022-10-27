@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
           $row = mysqli_fetch_array($result);
           header('Location:dashboard.php');
      } else{
-          $error[] = 'Error email or pass';
+          $error[] = 'Error emsil or pass';
      }
 }
 ?>
