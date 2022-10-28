@@ -38,11 +38,11 @@
             <button class="join"><a href="signup.php">Get started</Join></a></button>            
 
         </div>
-        <br></br>
+    </div>
         <footer>
           <div class="footer-content">
             <h3>Licence_ease</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, molestias asperiores architecto quisquam magni voluptatem excepturi veritatis inventore corrupti, incidunt rerum adipisci numquam accusantium recusandae deserunt reprehenderit, ut nemo quam?</p>
+            <p>As Licence-Ease we promise to save you time and money. We aim to provide a system that is always online. Our website can be accessed from anywhere, with any internet enabled device. We promise to make administration easy for you. We also offer licence disk holders at competitive prices. We are customer focused - Customer service is available at all times.</p>
             <ul class="socials">
               <li><a href="" class="fa fa-facebook"></a></li>
               <li><a href="" class="fa fa-instagram"></a></li>
