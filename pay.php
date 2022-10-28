@@ -1,24 +1,3 @@
-<?php
-@include 'config.php';
-
-if(isset($_POST['submit'])){
-     $email = mysqli_real_escape_string($conn, $_POST['email']);
-     $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-     $select = "SELECT * FROM client WHERE email = '$email' && password = '$password' ";
-
-     $result = mysqli_query($conn, $select);
-
-     if(mysqli_num_rows($result) > 0){
-        
-          $row = mysqli_fetch_array($result);
-          header('Location:dashboard.php');
-     } else{
-          $error[] = 'Error emsil or pass';
-     }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,31 +36,36 @@ if(isset($_POST['submit'])){
 
 <div class="container">  
 
-<form action="signin.php" method="POST">  
-     <h2>Sign in</h2>
-     <?php
-     if(isset($error)){
-          foreach($error as $error){
-               echo '<span class="error-msg">'.$error.'</span>';
-          }
-     }
+<form action="/action_page.php" onsubmit="myFunction()">  
+     <h2>Payment details</h2>
 
-     ?>
           <div class="box">  
-               <span><i class="fa fa-envelope"></i></span>  
-               <input type="text" name="email" placeholder="Email" class="input-data" required>  
+               <span><i class="fa fa-id-card-o"></i></span>  
+               <input type="number"  placeholder="Valid card Number" class="input-data" required>  
           </div>  
           <div class="box">  
-               <span><i class="fa fa-lock"></i></span>  
-               <input type="password" name="password" placeholder="Password" class="input-data" required>  
+               <span><i class="fa fa-calendar
+               "></i></span>  
+               <input type="date" class="input-data" required>  
           </div> 
-          <br></be><p>New member?
-            <a href="signup.php">Sign up</a> <!--and <a href="#">Policy privacy</a>-->
-          </p>
+          <div class="box">  
+               <span><i class="fa fa-credit-card"></i></span>  
+               <input type="number"  placeholder="Valid CVC number" class="input-data" required>  
+          </div>
+          <div class="box">  
+               <span><i class="fa fa-user"></i></span>  
+               <input type="text"  placeholder="Card owner" class="input-data" required>  
+          </div>
+          
           <div class="space">  
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  
-     </form>  
+     </form> 
+     <script>
+function myFunction() {
+  alert("Payment Successful: REF: INV50444");
+}
+</script> 
 
 
 </div>  

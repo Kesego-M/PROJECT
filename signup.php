@@ -39,22 +39,29 @@ if(isset($_POST['submit'])){
      <link rel="stylesheet" type="text/css" href="css/style.css">  
 </head>  
 <body>
-     <div class="main">
-          <div class="navbar">
-              <div class="icon">
-                  <h2 class="logo">Licence_ease</h2>
-              </div>
-  
-              <div class="menu"> 
-                  <ul>
-                      <li><a href="index.php">HOME</a></li>
-                      <li><a href="signup.php">SIGN UP</a></li>
-                      <li><a href="product.php">PRODUCTS</a></li>
-                      <li><a href="#">CONTACT US</a></li>
-                      <li><a href="#">ABOUT</a></li>
-                  </ul>
-              </div>
-          </div>  
+<div class="main">
+        <div class="navbar">
+         <header>
+            <div class="header-content">
+            <div class="icon">
+                <h2 class="logo">Licence_ease</h2>
+            </div>
+            <div class="slogan">
+            <em>Why stand in a line when you can be online!</em></div> 
+
+            <div class="menu"> <br>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="signin.php">SIGN IN</a></li>
+                    <li><a href="product.php">PRODUCTS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#bottom">ABOUT</a></li>
+                </ul>
+            </div>
+            </div>
+            </header>
+        </div>
+</header> 
 <div class="container">  
      <h2>Sign Up</h2>  
      <form action="signup.php" method="POST">  
@@ -130,6 +137,18 @@ if(isset($_POST['submit'])){
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  
      </form>  
-</div>  
+</div>
+<footer>
+          <div class="footer-content">
+            <h3>Licence_ease</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, molestias asperiores architecto quisquam magni voluptatem excepturi veritatis inventore corrupti, incidunt rerum adipisci numquam accusantium recusandae deserunt reprehenderit, ut nemo quam?</p>
+            <ul class="socials">
+              <li><a href="" class="fa fa-facebook"></a></li>
+              <li><a href="" class="fa fa-instagram"></a></li>
+              <li><a href="" class="fa fa-twitter"></a></li>
+              <li><a href="" class="fa fa-youtube"></a></li>  
+            </ul>
+          </div>
+        </footer>   
 </body>  
 </html>

@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="main">
+    <div class="main">
         <div class="navbar">
          <header>
             <div class="header-content">
@@ -30,42 +33,33 @@
             </div>
             </header>
         </div>
-</header>   
+</header>
 
-	<div id="wrap">
-	<div id="columns" class="columns_4">
-  <figure>
-  <img src="files\audi.jpg">
-	<figcaption>AUDI</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-	<figure>
-	<img src="files\ford.jpg">
-	<figcaption>FORD</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-  <figure>
-	<img src="files\merc.jpg">
-	<figcaption>MERCEDES BENZ</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-  
-	<figure>
-	<img src="files\nissan.jpg">
-	<figcaption>NISSAN</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-  	
-</div>
-    </div>
-    <footer>
+<div class="container">  
+
+<form action="signin.php" method="POST">  
+     <h2>Contact us</h2>
+
+          <div class="box">  
+               <span><i class="fa fa-user"></i></span>  
+               <input type="text" name="fname" placeholder="First Name" class="input-data" required>  
+          </div>  
+          <div class="box">  
+               <span><i class="fa fa-user"></i></span>  
+               <input type="text" name="lname" placeholder="Last Name" class="input-data" required>  
+          </div>
+          <div class="box">  
+               <span></i></span>  
+               <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+          </div>
+          <div class="space">  
+               <input type="submit" name="submit" class="btn" value="Submit">  
+          </div>  
+     </form>  
+
+
+</div>  
+<footer>
           <div class="footer-content">
             <h3>Licence_ease</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, molestias asperiores architecto quisquam magni voluptatem excepturi veritatis inventore corrupti, incidunt rerum adipisci numquam accusantium recusandae deserunt reprehenderit, ut nemo quam?</p>
@@ -76,6 +70,6 @@
               <li><a href="" class="fa fa-youtube"></a></li>  
             </ul>
           </div>
-        </footer>
+        </footer>                                                      
 </body>
 </html>
