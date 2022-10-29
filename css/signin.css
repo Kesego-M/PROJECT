@@ -59,9 +59,9 @@ ul{
 
 ul li{
 	list-style: none;
-	margin-right: 50px;
+	margin-right: 70px;
 	margin-top: 27px;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 ul li a{
@@ -123,44 +123,12 @@ ul li a:hover{
       font-family: 'Poppins', sans-serif;  
       color: #F0A500;
  }  
- body{  
-      width: 100%;  
-      min-height: 100vh;  
-      background:#334756 ;  
-      display: flex;  
-      justify-content: center;  
-      align-items: center;  
- }  
- .container{  
-      max-width: 400px;  
-      width: 100%;  
-      box-shadow: 0px 0px 2px #E8E8E8;  
-      background: #fff;  
-      position: relative;  
- }  
- .container::before{  
-      content: "";  
-      width: 100%;  
-      height: 8px;  
-      position: absolute;  
-      top: -1px;  
-      border-top-left-radius: 3px;  
-      border-top-right-radius: 3px;  
-      background: #009688;  
- }  
- .container h2{  
-      text-align: center;  
-      margin-top: 20px;  
- }  
- .container form{  
-      width: 100%;  
-      padding: 20px 50px;  
- }  
+  
  .container form .box{  
       width: 100%;  
       height: 40px;  
       position: relative;  
-      border: 1px solid #DFDFDF;  
+      border: 1px solid rgb(37, 37, 37);  
       margin: 10px 0px;  
  }  
  .box .input-data,  
@@ -169,7 +137,7 @@ ul li a:hover{
       top: 0;  
       width: 90%;  
       outline: none;  
-      border: 1px solid #DFDFDF;  
+      border: 1px solid rgb(37, 37, 37);  
       height: 100%;  
       right: 0;  
       padding-left: 5px;  
@@ -187,8 +155,8 @@ ul li a:hover{
  .space{  
       margin-top: 15px;  
  }  
- .pay{  
-      width: 10%;  
+ .btn{  
+      width: 100%;  
       text-align: center;  
       padding: 10px;  
       outline: none;  
@@ -198,16 +166,14 @@ ul li a:hover{
       font-size: 1em;  
       border: none;  
  }  
- @media (max-width: 424px) {  
-      .container form{  
-           padding: 20px;  
-      }  
- } 
+ 
  .container{
-	max-width: 400px;  
+    size: 50px;
+	max-width: 400px;
+    max-height: 900px;  
 	width: 100%;  
 	box-shadow: 0px 0px 2px #E8E8E8;  
-	background: #fff;  
+	background: rgb(37, 37, 37);  
 	position:relative;
 	display: block;
   margin-left: auto;
@@ -233,14 +199,7 @@ ul li a:hover{
 .container form{  
 		 width: 100%;  
 		 padding: 20px 50px;  
-}  
-.container .box{  
-		 width: 100%;  
-		 height: 40px;  
-		 position: relative;  
-		 border: 1px solid #DFDFDF;  
-		 margin: 10px 0px;   
-}
+} 
 .required {
 	color: red;
   }
@@ -279,6 +238,11 @@ ul li a:hover{
     padding: 10px;
   }
 
+
+
+  
+
+
  
 /*fotter*/
 footer {
@@ -286,7 +250,7 @@ footer {
     padding: 8px;
     background-color:#082032;
     color: #F0A500;
-    height: auto; 
+    height: 457px; 
   }
 .footer-content{
     display: flex;
@@ -343,137 +307,121 @@ header {
     text-align: center;
 }
 
-.history_lists{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.row{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem 0;
-}
-table{
-  background: #fff;
-  padding: 1rem;
-  text-align: left;
-  border-radius: 10px;
-}
-table td, th{
-  padding: 0.2rem 0.8rem;
-}
-table th{
-  font-size: 15px;
-}
-table td{
-  font-size: 13px;
-  color: rgb(100, 100, 100);
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/*Product css*/
 *{
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body{
-  background: rgb(219, 219, 219);
-}
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 20px;
-  background: #fff;
-}
-.logo{
-  display: flex;
-  align-items: center;
-}
-.logo a{
-  color: #000;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 2rem 8rem 2rem 2rem;
-}
-
-.header-icons{
-  display: flex;
-  align-items: center;
-}
-.header-icons i{
-  margin-right: 2rem;
-  cursor: pointer;
-}
-.header-icons .account{
-  width: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header-icons .account img{
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.container{
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-body{
-  width: 70%;
-  padding: 1rem;
-}
-.promo_card{
-  width: 100%;
-  color: #fff;
-  margin-top: 10px;
-  border-radius: 8px;
-  padding: 0.5rem 1rem 1rem 3rem;
-  background: rgb(37, 37, 37);
-}
-.promo_card h1, .promo_card span, button{
-  margin: 10px;
-}
-.promo_card button{
-  display: block;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.history_lists{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.row{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem 0;
-}
-table{
-  background: rgb(37, 37, 37);
-  padding: 1rem;
-  text-align: left;
-  border-radius: 10px;
-}
-table td, th{
-  padding: 0.2rem 0.8rem;
-}
-table th{
-  font-size: 15px;
-}
-table td{
-  font-size: 13px;
-  color: rgb(100, 100, 100);
-}
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  }
+  body {
+      background: url(//subtlepatterns.com/patterns/scribble_light.png);
+    font-family: Calluna, Arial, sans-serif;
+    min-height: 1000px;
+  }
+  #wrap{
+      width: 90%;
+      max-width: 800px;
+      margin: 10px auto;
+  }
+  .columns_2 figure{
+     width:49%;
+     margin-right:1%;
+  }
+  .columns_2 figure:nth-child(2){
+      margin-right: 0;
+  }
+  .columns_3 figure{
+     width:32%;
+     margin-right:1%;
+  }
+  .columns_3 figure:nth-child(3){
+      margin-right: 0;
+  }
+  .columns_4 figure{
+     width:24%;
+     margin-right:1%;
+  }
+  .columns_4 figure:nth-child(4){
+      margin-right: 0;
+  }
+  .columns_5 figure{
+     width:19%;
+     margin-right:1%;
+  }
+  .columns_5 figure:nth-child(5){
+      margin-right: 0;
+  }
+  #columns figure:hover{
+      -webkit-transform: scale(1.1);
+      -moz-transform:scale(1.1);
+      transform: scale(1.1);
+  
+  }
+  #columns:hover figure:not(:hover) {
+      opacity: 0.4;
+  }
+  div#columns figure {
+      display: inline-block;
+      background: #FEFEFE;
+      border: 2px solid #FAFAFA;
+      box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+      margin: 0 0px 15px;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+      padding: 15px;
+      padding-bottom: 5px;
+      background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+      opacity: 1;
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease;
+  }
+  
+  div#columns figure img {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+      margin-bottom: 5px;
+  }
+  
+  div#columns figure figcaption {
+    font-size: .9rem;
+    color: #444;
+    line-height: 1.5;
+    height:60px;
+    font-weight:600;
+    text-overflow:ellipsis;
+  }
+  
+  a.button{
+    padding:10px;
+    background:#082032;
+    margin:10px;
+    display:block;
+    text-align:center;
+    color:#F0A500;
+    transition:all 1s linear;
+    text-decoration:none;
+    text-shadow:1px 1px 3px rgba(0,0,0,0.3);
+    border-radius:3px;
+    border-bottom:3px solid #082032;
+    box-shadow:1px 1px 3px rgba(0,0,0,0.3);
+  }
+  a.button:hover{
+    background:#5119f9;
+    border-bottom:3px solid #5119f9;
+    color:#f1f2f3;
+  }
+  @media screen and (max-width: 960px) { 
+    #columns figure { width: 24%; }
+  }
+  @media screen and (max-width: 767px) {
+    #columns figure { width:32%;}
+  }
+  @media screen and (max-width: 600px) {
+    #columns figure { width: 49%;}
+  }
+  @media screen and (max-width: 500px) {
+    #columns figure { width: 100%;}
+  }

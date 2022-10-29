@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
           $row = mysqli_fetch_array($result);
           header('Location:dashboard.php');
      } else{
-          $error[] = 'Error emsil or pass';
+          $error[] = "Incorrect email or password";
      }
 }
 ?>
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign in</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/signin.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="signin.php">SIGN IN</a></li>
                     <li><a href="product.php">PRODUCTS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="contact.php">CONTACT US</a></li>
                     <li><a href="#bottom">ABOUT</a></li>
                 </ul>
             </div>
@@ -82,8 +82,6 @@ if(isset($_POST['submit'])){
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  
      </form>  
-
-
 </div>  
 <footer>
           <div class="footer-content">

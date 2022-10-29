@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
 </head>
 <body>
 <div class="main">
@@ -23,7 +24,7 @@
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="signin.php">SIGN IN</a></li>
                     <li><a href="product.php">PRODUCTS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="contact.php">CONTACT US</a></li>
                     <li><a href="#bottom">ABOUT</a></li>
                 </ul>
             </div>

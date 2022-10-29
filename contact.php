@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="signin.php">SIGN IN</a></li>
                     <li><a href="product.php">PRODUCTS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="contact.php">CONTACT US</a></li>
                     <li><a href="#bottom">ABOUT</a></li>
                 </ul>
             </div>
@@ -50,8 +50,9 @@
           </div>
           <div class="box">  
                <span></i></span>  
-               <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+               <textarea id="subject" style="resize:none" name="subject" placeholder="Write something.." style="height:100px"></textarea>
           </div>
+          <br>
           <div class="space">  
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  

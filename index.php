@@ -22,7 +22,7 @@
                     <li><a href="#">HOME</a></li>
                     <li><a href="signin.php">SIGN IN</a></li>
                     <li><a href="product.php">PRODUCTS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="contact.php">CONTACT US</a></li>
                     <li><a href="#bottom">ABOUT</a></li>
                 </ul>
             </div>

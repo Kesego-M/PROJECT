@@ -3,22 +3,24 @@
 @include 'config.php';
 
 if(isset($_POST['submit'])){
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $idnum = $_POST['idnum']; 
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $address = $_POST['address'];
-    $contact = $_POST['contact'];
-    
+    $regnum = $_POST['regnum'];
+    $vinnum = $_POST['vinnum'];
+    $make = $_POST['cars'];
+    $type = $_POST['cartype'];
 
+    $result = mysqli_query($conn, "SELECT client_id FROM client WHERE email = '$email'");
 
-    $query = "INSERT INTO client (fname, lname, address, contact, idnum, email, password) VALUES ('$fname', '$lname', '$address', '$contact', '$idnum', '$email', '$password')";
+    $row = mysqli_fetch_array($result);
+ 
+    $query = "INSERT INTO vehicle (registration, vin, make, type, client_client_id) VALUES ('$regnum', '$vinnum', '$make', '$type','$row[0]')";
     $query_run = mysqli_query($conn, $query);
+
+
 
     if($query_run){
         $_SESSION['status'] = "Success";
-        header("Location: vehicle.php");
+        header("Location: signin.php");
     } else {
         $_SESSION['status'] = "Not success";
         header("Location: signup.php");
@@ -64,46 +66,39 @@ if(isset($_POST['submit'])){
         </div>
 </header> 
 <div class="container">  
-     <h2>Sign Up</h2>  
-     <form action="signup.php" method="POST">  
-          <span class="required">*</span> Required field
-          <div class="box">  
-               <span><i class="fa fa-user"></i></span>  
-               <input type="text" name="fname" placeholder="First Name" class="input-data" required>
-               <span class="required">* </span>  
-          </div>
-          <div class="box">  
-               <span><i class="fa fa-user"></i></span>  
-               <input type="text" name="lname" placeholder="Last Name" class="input-data">  
-          </div>  
-          <div class="box">  
-              <span><i class="fa fa-user"></i></span>  
-              <input type="number" name="idnum" placeholder="Identity Number" class="input-data" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-    type = "number"
-    maxlength = "13"  required>  
-          </div>
-          <div class="box">  
+     <h2>Add a new vehicle</h2>  
+     <form action="vehicle.php" method="POST">  
+     <div class="box">  
                <span><i class="fa fa-envelope"></i></span>  
                <input type="text" name="email" placeholder="Email" class="input-data" required>  
           </div>  
           <div class="box">  
-               <span><i class="fa fa-lock"></i></span>  
-               <input type="password" name="password" placeholder="Password" class="input-data" required>  
-          </div>  
-          
-          <div class="box">  
-              <span><i class="fa fa-home"></i></span>  
-              <input type="text" name="address" placeholder="Address" class="input-data" required>  
-          </div>
-          <div class="box">  
-              <span><i class="fa fa-phone"></i></span>  
-              <input type="number" name="contact" placeholder="Contact Number" class="input-data" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-    type = "number"
-    maxlength = "10"  required>  
-          </div>
-          </be><p>Already a member?
-            <a href="#">Login</a> <!--and <a href="#">Policy privacy</a>-->
-          </p>
+               <span><i class="fas fa-car"></i></span>  
+               <input type="text" name="regnum" placeholder="Registration Number" class="input-data" maxlength="6" required>  
+           </div> 
+           <div class="box">  
+               <span><i class="fas fa-car"></i></span>  
+               <input type="text" name="vinnum" placeholder="Vehicle identification Number" class="input-data" maxlength="17" required>  
+           </div>   
+          <label for="cars">Choose a car Make:</label>
+              <select name="cars" id="cars">
+              <option value="" selected hidden>Select car make</option>
+              <option value="Volvo">Volvo</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ford">Ford</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Volkswagen">Volkswagen</option>
+              </select>
+
+              <label for="cartype">Choose a car type:</label>
+              <select name="cartype" id="cartype">
+              <option value="" selected hidden>Select car type</option>
+              <option value="Heavy Vehicle">Heavy Vehicle</option>
+              <option value="Light Vehicle">Light Vehicle</option>
+              <option value="Motorcycle">Motorcycle</option>
+              </select><br>
           <div class="space">  
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  
