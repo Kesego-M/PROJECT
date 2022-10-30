@@ -42,13 +42,6 @@
 <div class="main-body">
       <div class="promo_card">
         <h1>User Dashboard </h1>
-        <span><label for="paycar">Choose a car Make:</label>
-              <select name="paycar" id="paycar">
-              <option value="" selected hidden>Car type</option>
-              <option value="Motorcycle">Motorcycle R250</option>
-              <option value="Light MV">Light R750</option>
-              <option value="Heavy MV">Heavy R2500</option>
-              </select></span>
         <button class="pay"><a href="pay.php">Pay now</Join></a></button>
 </div>
 <div class="history_lists">

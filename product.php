@@ -38,33 +38,63 @@
   <figure>
   <img src="files\audi.jpg">
 	<figcaption>AUDI</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
+
 	</figure>
 	
 	<figure>
 	<img src="files\ford.jpg">
 	<figcaption>FORD</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
+
 	</figure>
 	
   <figure>
 	<img src="files\merc.jpg">
 	<figcaption>MERCEDES BENZ</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
+
 	</figure>
   
 	<figure>
 	<img src="files\nissan.jpg">
 	<figcaption>NISSAN</figcaption>
-    <span class="price">R34.00</span>
-    <a class="button" href="#">Buy Now</a>
+
 	</figure>
 	
   	
 </div>
+    </div>
+    <div class="container"> 
+      <div class="paypal">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="nkosis123@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Products">
+<input type="hidden" name="item_number" value="Product">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<table>
+<tr><td><input type="hidden" name="on0" value="Disks">Disks</td></tr><tr><td><select name="os0">
+	<option value="Audi">Audi $8.00 USD</option>
+	<option value="Ford">Ford $8.00 USD</option>
+	<option value="Mercedes Benz">Mercedes Benz $8.00 USD</option>
+	<option value="Nissan">Nissan $8.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="option_select0" value="Audi">
+<input type="hidden" name="option_amount0" value="8.00">
+<input type="hidden" name="option_select1" value="Ford">
+<input type="hidden" name="option_amount1" value="8.00">
+<input type="hidden" name="option_select2" value="Mercedes Benz">
+<input type="hidden" name="option_amount2" value="8.00">
+<input type="hidden" name="option_select3" value="Nissan">
+<input type="hidden" name="option_amount3" value="8.00">
+<input type="hidden" name="option_index" value="0">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+    </div>
     </div>
     <footer>
           <div class="footer-content">

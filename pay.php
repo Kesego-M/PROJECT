@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign in</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/pay.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -34,39 +34,46 @@
         </div>
 </header>
 
-<div class="container">  
+<div class="container"> 
+     <br>
+     <h1> Payment portal </h1>
+     <br>
+     <h4>Payment breakdown: </h4>
+     <p>Motorcycle fee: R394</p>
+     <p>Light vehicle fee: R666</p>
+     <p>Heavy vehicle fee: R1482</p>
+     <p>Admin & delivery fee: R150</p>
 
-<form action="/action_page.php" onsubmit="myFunction()">  
-     <h2>Payment details</h2>
 
-          <div class="box">  
-               <span><i class="fa fa-id-card-o"></i></span>  
-               <input type="number"  placeholder="Valid card Number" class="input-data" required>  
-          </div>  
-          <div class="box">  
-               <span><i class="fa fa-calendar
-               "></i></span>  
-               <input type="date" class="input-data" required>  
-          </div> 
-          <div class="box">  
-               <span><i class="fa fa-credit-card"></i></span>  
-               <input type="number"  placeholder="Valid CVC number" class="input-data" required>  
-          </div>
-          <div class="box">  
-               <span><i class="fa fa-user"></i></span>  
-               <input type="text"  placeholder="Card owner" class="input-data" required>  
-          </div>
-          
-          <div class="space">  
-               <input type="submit" name="submit" class="btn" value="Submit">  
-          </div>  
-     </form> 
-     <script>
-function myFunction() {
-  alert("Payment Successful: REF: INV50444");
-}
-</script> 
-
+     
+     
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="nkosis123@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Disk Renewal">
+<input type="hidden" name="item_number" value="DiskRenewal">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<table>
+<tr><td><input type="hidden" name="on0" value="Vehicle type">Vehicle type</td></tr><tr><td><select name="os0">
+	<option value="Motorcycle">Motorcycle $30.00 USD</option>
+	<option value="Light vehicle">Light vehicle $45.00 USD</option>
+	<option value="Heavy vehicle">Heavy vehicle $90.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="option_select0" value="Motorcycle">
+<input type="hidden" name="option_amount0" value="30.00">
+<input type="hidden" name="option_select1" value="Light vehicle">
+<input type="hidden" name="option_amount1" value="45.00">
+<input type="hidden" name="option_select2" value="Heavy vehicle">
+<input type="hidden" name="option_amount2" value="90.00">
+<input type="hidden" name="option_index" value="0">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
 
 </div>  
 <footer>
