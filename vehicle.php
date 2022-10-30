@@ -22,8 +22,8 @@ if(isset($_POST['submit'])){
         $_SESSION['status'] = "Success";
         header("Location: signin.php");
     } else {
-        $_SESSION['status'] = "Not success";
-        header("Location: signup.php");
+        $_SESSION['status'] = "Unsuccessful action";
+        header("Location: vehicle.php");
     }
 }
 ?>

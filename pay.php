@@ -1,3 +1,29 @@
+<?php
+
+@include 'config.php';
+
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $amount = $_POST['payamount'];
+    
+    $result = mysqli_query($conn, "SELECT client_id FROM client WHERE email = '$email'");
+
+    $row = mysqli_fetch_array($result);
+
+    $query = "INSERT INTO invoice (amount, date, client_client_id) VALUES ($amount, NOW(), $row[0])";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run){
+        $_SESSION['status'] = "Success";
+        header("Location: dashboard.php");
+
+    } else {
+        $_SESSION['status'] = "Unsuccessful transaction";
+        header("Location: pay.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,35 +63,47 @@
 <div class="container"> 
 <form action="pay.php" method="POST">  
      <h2>Payment details</h2>
+     <div class="box">  
+               <span><i class="fa fa-envelope"></i></span>  
+               <input type="text" name="email" placeholder="Email" class="input-data" required>  
+          </div>  
           <div class="box">  
                <span><i class="fa fa-id-card-o"></i></span>  
-               <input type="number"  placeholder="Valid card Number" class="input-data" required>  
+               <input type="number"  placeholder="Valid card Number" class="input-data" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "16"  required>  
           </div>  
           <div class="box">  
                <span><i class="fa fa-calendar
                "></i></span>  
-               <input type="date" class="input-data" required>  
+               <input type="month" id="start" name="start"
+       min="2022-10" class="input-data" required>  
           </div> 
           <div class="box">  
                <span><i class="fa fa-credit-card"></i></span>  
-               <input type="number"  placeholder="Valid CVC number" class="input-data" required>  
+               <input type="number"  placeholder="Valid CVC number" class="input-data" maxlength ="3"oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "3"  required>  
           </div>
           <div class="box">  
                <span><i class="fa fa-user"></i></span>  
                <input type="text"  placeholder="Card owner" class="input-data" required>  
           </div>
-          
+          <label for="payamount">Vehicle type:</label>
+              <select name="payamount" id="payamount">
+              <option value="" selected hidden>Select a car type</option>
+              <option value="450">Motorcycle - R450</option>
+              <option value="850">Light vehicle - R850</option>
+              <option value="1800">Heavy Vehicle - R1800</option>
+              
+              </select>
+              <p>*Licence fees include admin & delivery fees</p>
           <div class="space">  
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  
-     </form> 
-     <script>
-function myFunction() {
-  alert("Payment Successful: REF: INV50444");
-}
-</script>
 
-</div>  
+     </form> 
+</div> 
 <footer>
           <div class="footer-content">
             <h3>Licence_ease</h3>

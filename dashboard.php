@@ -48,7 +48,6 @@
         <div class="list1">
           <div class="row">
             <h4>Vehicles</h4>
-            <a href="#">See all</a>
           </div>
           <table class="vtable">
             <thead>
@@ -91,19 +90,40 @@
         </div>
 <div class="list2">
           <div class="row">
-            <h4>Documents</h4>
-            <a href="#" class="fa fa-upload">Upload</a>
+            <h4>invoice</h4>
           </div>
           <table>
             <thead>
               <tr>
                 <th>#</th>
-                <th>Title</th>
-                <th>Type</th>
-                <th>Uplaoded</th>
+                <th>Amount</th>
+                <th>Date</th>
               </tr>
             </thead>
             <tbody>
+            <?php
+              if($conn->connect_error){
+                die("Connection failed: " . $conn->connect_error);
+              }
+
+              $sql = "SELECT * from invoice";
+              $result = $conn->query($sql);
+
+              if(!$result){
+                die("Invalid query: " . $conn->connect_error);
+              }
+
+              while($row = $result->fetch_assoc()){
+                echo "<tr>
+                <td>" .$row['invoice_id'] . "</td>
+                <td>" .$row['amount'] . "</td>
+                <td>" .$row['date'] . "</td>
+                </tr>                
+                
+                ";
+              }
+
+              ?>
             </tbody>
           </table>
         </div>
