@@ -1,23 +1,3 @@
-<?php
-@include 'config.php';
-
-if(isset($_POST['submit'])){
-     $email = mysqli_real_escape_string($conn, $_POST['email']);
-     $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-     $select = "SELECT * FROM client WHERE email = '$email' && password = '$password' ";
-
-     $result = mysqli_query($conn, $select);
-
-     if(mysqli_num_rows($result) > 0){
-        
-          $row = mysqli_fetch_array($result);
-          header('Location:dashboard.php');
-     } else{
-          $error[] = "Incorrect email or password";
-     }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +5,9 @@ if(isset($_POST['submit'])){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign in</title>
+  <title>Contact us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="css/signin.css">
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -58,30 +38,27 @@ if(isset($_POST['submit'])){
 <div class="container">  
 
 <form action="signin.php" method="POST">  
-     <h2>Sign in</h2>
-     <?php
-     if(isset($error)){
-          foreach($error as $error){
-               echo '<span class="error-msg">'.$error.'</span>';
-          }
-     }
+     <h2>Contact us</h2>
 
-     ?>
           <div class="box">  
-               <span><i class="fa fa-envelope"></i></span>  
-               <input type="text" name="email" placeholder="Email" class="input-data" required>  
+               <span><i class="fa fa-user"></i></span>  
+               <input type="text" name="fname" placeholder="First Name" class="input-data" required>  
           </div>  
           <div class="box">  
-               <span><i class="fa fa-lock"></i></span>  
-               <input type="password" name="password" placeholder="Password" class="input-data" required>  
-          </div> 
-          <br></be><p>New member?
-            <a href="signup.php">Sign up</a> <!--and <a href="#">Policy privacy</a>-->
-          </p>
+               <span><i class="fa fa-user"></i></span>  
+               <input type="text" name="lname" placeholder="Last Name" class="input-data" required>  
+          </div>
+          <div class="box">  
+               <span></i></span>  
+               <textarea id="subject" style="resize:none" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+          </div>
+          <br>
           <div class="space">  
                <input type="submit" name="submit" class="btn" value="Submit">  
           </div>  
      </form>  
+
+
 </div>  
 <footer>
           <div class="footer-content">
